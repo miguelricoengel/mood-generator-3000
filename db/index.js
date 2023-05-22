@@ -1,36 +1,7 @@
-// ℹ️ package responsible to make the connection with mongodb
-// https://www.npmjs.com/package/mongoose
+
 const mongoose = require("mongoose");
 
-// ℹ️ Sets the MongoDB URI for our app to have access to it.
-// If no env has been set, we dynamically set it to whatever the folder name was upon the creation of the app
-
-const MONGO_URI =
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://mikey6:<Nomadasperdidos#3>@mikey6.l8g62xy.mongodb.net/?retryWrites=true&w=majority";
-
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
-
-async function run() {
-  try {
-    // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir);
+const MONGO_URI = "mongodb+srv://mikey6:gogAQ366m0bxCYs8@mikey6.l8g62xy.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose
   .connect(MONGO_URI)

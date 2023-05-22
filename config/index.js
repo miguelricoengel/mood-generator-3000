@@ -26,8 +26,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 
 // Connects the mongo uri to maintain the same naming structure
-const MONGO_URI =
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/basic-auth";
+const MONGO_URI = "mongodb+srv://mikey6:gogAQ366m0bxCYs8@mikey6.l8g62xy.mongodb.net/?retryWrites=true&w=majority";
 
 
 // Middleware configuration
