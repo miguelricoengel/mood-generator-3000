@@ -1,0 +1,32 @@
+
+
+<div class="vibeview">
+
+<div class="video">
+  <video id="myVideo" autoplay loop muted> <source src="/images/{{vibe.visuals}}.mp4" type="video/mp4"></video>
+</div>
+
+<div class="audio">
+<audio src="/images/{{vibe.sounds}}.mp3" autoplay loop controls></audio>
+<audio src="/images/{{vibe.atmos}}.mp3" autoplay loop controls></audio>
+</div>
+
+</div>
+
+<script>
+  // Autoplay the audio elements
+  var audio1 = Vibe.getElementById('sounds');
+  var audio2 = Vibe.getElementById('atmos');
+
+  audio1.autoplay = true;
+  audio2.autoplay = true;
+
+  // Enable looping for the audio elements
+  audio1.loop = true;
+  audio2.loop = true;
+
+  // Play the audio elements
+  audio1.play();
+  audio2.play();
+</script>
+

@@ -1,0 +1,48 @@
+<form id="vibeForm" action="/edit/{{vibe._id}}" method="post">
+  <input type="hidden" name="_method" value="PUT">
+  <div id="form"></div>
+  <h4>i still am {{ user.username }} <br>
+    i still am {{ user.username }} <br>
+    i still am {{ user.username }} <br><br>
+  </h4>
+
+  <h4>
+    and i still am  
+    <select id="atmos" name="atmos">
+      <option value="atmosrain" {{#if_eq vibe.atmos "atmosrain"}}selected{{/if_eq}}>listening to the sound of the rain falling</option>
+      <option value="atmosunderwater" {{#if_eq vibe.atmos "atmosunderwater"}}selected{{/if_eq}}>slowly sinking underwater</option>
+      <option value="atmosspace" {{#if_eq vibe.atmos "atmosspace"}}selected{{/if_eq}}>floating in space</option>
+    </select>
+  </h4> <br>
+
+  <h4>all i still can hear is  
+    <select id="sounds" name="sounds">
+      <option value="soundsrain" {{#if_eq vibe.sounds "soundrain"}}selected{{/if_eq}}>the wind whistling through the trees</option>
+      <option value="soundunderwater" {{#if_eq vibe.sounds "soundunderwater"}}selected{{/if_eq}}>the endless ocean over me</option>
+      <option value="soundspace" {{#if_eq vibe.sounds "soundspace"}}selected{{/if_eq}}>the instruments and pilot messages in the background</option>
+    </select>
+  </h4><br>
+
+  <h4>all i still can see is 
+    <select id="visuals" name="visuals">
+      <option value="visualrain" {{#if_eq vibe.visuals "visualrain"}}selected{{/if_eq}}>the foggy forest I'm lost in</option>
+      <option value="visualunderwater" {{#if_eq vibe.visuals "visualunderwater"}}selected{{/if_eq}}>the surface of the sea from underneath</option>
+      <option value="visualspace" {{#if_eq vibe.visuals "visualspace"}}selected{{/if_eq}}>the space station I'm staying in</option>
+    </select> 
+  </h4>
+
+  <br><br> 
+  <h4>this is still my mood <br>
+    i still have control <br><br>
+    i still choose it, i still name it <br>
+    i still feel it, i still save it <br>
+    <br><input type="text" id="title" name="title" minlength="4" value="{{vibe.title}}"></input><br><br
+
+      <br>
+      <div>
+        <button type="submit" class="button" "center">les goo agaiiinnnn</button><br>
+      </div>
+    </h4>
+  </div>
+</form>
+

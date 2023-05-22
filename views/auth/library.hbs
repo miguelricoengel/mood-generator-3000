@@ -1,0 +1,25 @@
+
+<div class="right">
+ <h3>vibe library</h3> <br><br><br>
+
+{{#each vibes}}
+   <h5>{{title}}</h5>
+     <p>selected atmos feature: {{atmos}}</p>
+     <p>selected sound feature: {{sounds}}</p>
+     <p>selected visual feature: {{visuals}}</p><br>
+   
+    <div class="inline">
+        <a type="submit" class="button" href="vibe/{{_id}}">dive in</a>
+
+        <a type="submit" class="button"href="/edit/{{_id}}" >edit</a><br> 
+       
+        <a type="submit" class="button" >❤️‍🩹</a>
+       
+<form action="/library/delete/{{_id}}" method="POST" class="button-form">
+  <button type="submit" class="button">delete</button>
+</form>
+        <br><br>
+   
+    </div>
+{{/each}}
+</div>

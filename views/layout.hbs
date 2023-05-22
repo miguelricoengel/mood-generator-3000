@@ -1,0 +1,44 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{appTitle}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+    <div class="background" id="breathing"></div>
+<nav>
+  <div class="nav">
+  <input type="checkbox">
+    <span></span>
+    <span></span>
+    <div class="menu">
+      <ul class="banner">
+
+        {{#if user.username}}
+        <li><p class="menufont">{{user.username}}'s menu 🐾</p></li>
+        <li><p><a href="/home">home</a></p></li>
+        <li><p><a href="/create"> create </a></p></li>
+        <li><p><a href="/library"> library </a></p></li>
+        <li><p><a href="/logout">log out</a></p></li>
+     
+        {{else}}
+        <li><p><a href="/"> home </a></p></li>
+        <li><p><a href="/signup">signup</a></p></li>
+        <li><p><a href="/login">log in</a></p></li>
+      </ul>
+        {{/if}}
+        
+     </div>
+    </div>
+    </nav>
+
+    {{{body}}}
+
+    <script src="/js/script.js"></script>
+  </body>
+
+</html>
